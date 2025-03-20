@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #E3F2FD; /* Light Blue */
+            color: #333;
+            text-align: center;
+        }
+
+        /* Chat Container */
+        #chat-container {
+            width: 50%;
+            margin: auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border: 2px solid #90CAF9;
+        }
+
+        h2 {
+            color: #1565C0;
+        }
+
+        /* Chat Box */
+        #chat-box {
+            height: 400px;
+            overflow-y: auto;
+            border: 1px solid #90CAF9;
+            padding: 10px;
+            background: #F1F8E9;
+            border-radius: 5px;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Messages */
+        .message {
+            margin: 10px 0;
+            padding: 10px 15px;
+            border-radius: 15px;
+            max-width: 70%;
+            display: inline-block;
+            clear: both;
+            font-size: 16px;
+        }
+
+        .user {
+            background: #BBDEFB;
+            color: #0D47A1;
+            align-self: flex-end;
+            text-align: right;
+            float: right;
+        }
+
+        .bot {
+            background: #C8E6C9;
+            color: #1B5E20;
+            align-self: flex-start;
+            text-align: left;
+            float: left;
+        }
+
+        /* Input Box */
+        #user-input {
+            width: 75%;
+            padding: 10px;
+            border: 2px solid #64B5F6;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        /* Send Button */
+        button {
+            padding: 10px 15px;
+            border: none;
+            background: #64B5F6;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background: #42A5F5;
+        }
+
+        /* Clearfix */
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+</head>
+<body>
+    <h2>DotApp Chatbot</h2>
+    <div id="chat-container">
+        <div id="chat-box"></div>
+        <input type="text" id="user-input" placeholder="Type a message..." />
+        <button onclick="sendMessage()">Send</button>
+    </div>
+
+    <script>
+        function sendMessage() {
+            let userInput = document.getElementById("user-input").value.trim();
+            if (!userInput) return;
+
+            let chatBox = document.getElementById("chat-box");
+
+            // Add user message with proper formatting
+            let userMessage = `<div class="message user clearfix">You: ${userInput}</div>`;
+            chatBox.innerHTML += userMessage;
+
+            // Clear input field
+            document.getElementById("user-input").value = "";
+
+            // Send request to chatbot API
+            fetch("http://127.0.0.1:8000/api/chatbot/", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ message: userInput })
+            })
+            .then(response => response.json())
+            .then(data => {
+                let botMessage = `<div class="message bot clearfix">Bot: ${data.response}</div>`;
+                chatBox.innerHTML += botMessage;
+
+                // Auto-scroll to latest message
+                chatBox.scrollTop = chatBox.scrollHeight;
+            })
+            .catch(error => {
+                console.error("Error:", error);
+            });
+        }
+
+        // Send message when user presses "Enter"
+        document.getElementById("user-input").addEventListener("keypress", function(event) {
+            if (event.key === "Enter") {
+                sendMessage();
+            }
+        });
+    </script>
+</body>
+</html>

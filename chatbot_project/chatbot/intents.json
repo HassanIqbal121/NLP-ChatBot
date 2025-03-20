@@ -1,0 +1,229 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hey",
+        "How are you",
+        "Is anyone there?",
+        "Hello",
+        "Good day"
+      ],
+      "responses": [
+        "Hey :-) How can I assist you with Dot-App?",
+        "Hello! Thanks for visiting Dot-App. How can I help?",
+        "Hi there! How can I assist you today?",
+        "Hi! What can I do for you?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "See you later", "Goodbye", "Take care"],
+      "responses": [
+        "See you later! Have a great day.",
+        "Goodbye, thanks for visiting!",
+        "Take care and come back soon!"
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thanks", "Thank you", "That's helpful", "Thanks a lot!"],
+      "responses": [
+        "You're welcome! Happy to help.",
+        "Anytime! Glad I could assist.",
+        "You're welcome! Let me know if you need anything else."
+      ]
+    },
+    {
+      "tag": "features",
+      "patterns": [
+        "What features does Dot-App have?",
+        "Tell me about Dot-App's features",
+        "What can Dot-App do?",
+        "What are the main features of Dot-App?"
+      ],
+      "responses": [
+        "Dot-App provides personalized learning paths, AI-powered content recommendations, progress tracking, and subscription-based content access.",
+        "With Dot-App, you can follow structured learning paths, track your progress, get AI-driven recommendations, and much more."
+      ]
+    },
+    {
+      "tag": "pricing",
+      "patterns": [
+        "What are the prices of Dot-App?",
+        "How much does Dot-App cost?",
+        "Is Dot-App free?",
+        "Tell me about pricing"
+      ],
+      "responses": [
+        "Dot-App offers subscription plans. You can check the details on our pricing page.",
+        "Dot-App has both free and premium subscription options. The premium plans provide access to advanced features and content."
+      ]
+    },
+    {
+      "tag": "installation",
+      "patterns": [
+        "How do I install Dot-App?",
+        "Is Dot-App available for download?",
+        "Where can I get Dot-App?",
+        "Can I install Dot-App on my phone?"
+      ],
+      "responses": [
+        "Dot-App is available for web and mobile. You can download the app from the App Store or Google Play Store.",
+        "You can install Dot-App by visiting our website or by downloading it from the App Store or Google Play Store."
+      ]
+    },
+    {
+      "tag": "subscriptions",
+      "patterns": [
+        "How does the subscription work?",
+        "Do I need a subscription for Dot-App?",
+        "What is included in the subscription?",
+        "Can I cancel my subscription anytime?"
+      ],
+      "responses": [
+        "Dot-App offers various subscription plans for both students and editors. You can cancel your subscription anytime from your account settings.",
+        "Yes, you need a subscription to access premium content. You can choose from monthly or yearly plans."
+      ]
+    },
+    {
+      "tag": "login",
+      "patterns": [
+        "How do I log in?",
+        "I forgot my password, what should I do?",
+        "Can I reset my password?",
+        "How do I sign in?"
+      ],
+      "responses": [
+        "You can log in using your username and password. If you forgot your password, you can reset it through the 'Forgot Password' link.",
+        "Simply enter your credentials on the login page. If you forgot your password, you can reset it via the provided link."
+      ]
+    },
+    {
+      "tag": "account",
+      "patterns": [
+        "How do I create an account?",
+        "How can I sign up for Dot-App?",
+        "Can I use Dot-App without an account?",
+        "I want to change my account settings"
+      ],
+      "responses": [
+        "To create an account, visit the sign-up page and provide your details. You can also sign up using your Google or Facebook account.",
+        "Visit the registration page to create your account. Once signed up, you can access all the learning content."
+      ]
+    },
+    {
+      "tag": "error_handling",
+      "patterns": [
+        "I'm having trouble with the app",
+        "The app is not working properly",
+        "Why is the app slow?",
+        "I can't access my content"
+      ],
+      "responses": [
+        "Sorry for the inconvenience. Please try restarting the app. If the issue persists, contact support.",
+        "We apologize for any issues you're facing. Please check your internet connection or try again later."
+      ]
+    },
+    {
+      "tag": "technical_support",
+      "patterns": [
+        "How can I contact support?",
+        "I need help with an issue",
+        "Where can I get technical support?",
+        "Is there a support page?"
+      ],
+      "responses": [
+        "You can contact our support team via the support page or send an email to support@dotapp.com.",
+        "Visit our help center for FAQs or reach out to our support team for further assistance."
+      ]
+    },
+    {
+      "tag": "content",
+      "patterns": [
+        "How can I upload content?",
+        "Can I add my own content?",
+        "How do I create a new lesson?",
+        "Can I upload videos?"
+      ],
+      "responses": [
+        "As an editor, you can upload content by navigating to your dashboard and selecting 'Add Content'. You can upload videos, text, code, and images.",
+        "You can create a new lesson by visiting the content management section of your dashboard."
+      ]
+    },
+    {
+      "tag": "feedback",
+      "patterns": [
+        "How can I provide feedback?",
+        "I want to suggest something for the app",
+        "Where can I leave a review?",
+        "How do I rate Dot-App?"
+      ],
+      "responses": [
+        "You can leave feedback on our website or through the feedback section in the app.",
+        "We welcome your suggestions! Please submit your feedback through the contact form."
+      ]
+    },
+    {
+      "tag": "language_support",
+      "patterns": [
+        "Is Dot-App available in other languages?",
+        "Can I change the app's language?",
+        "Does Dot-App support multiple languages?"
+      ],
+      "responses": [
+        "Yes, Dot-App supports multiple languages. You can change the language from the settings page.",
+        "Currently, Dot-App is available in English, with plans to add more languages in the future."
+      ]
+    },
+    {
+      "tag": "privacy_policy",
+      "patterns": [
+        "What is the privacy policy of Dot-App?",
+        "How do you protect my data?",
+        "Where can I find the privacy policy?"
+      ],
+      "responses": [
+        "You can view our privacy policy by visiting the 'Privacy Policy' page at the bottom of the website.",
+        "Your privacy is important to us. We ensure that your data is protected with encryption and secure authentication."
+      ]
+    },
+    {
+      "tag": "data_security",
+      "patterns": [
+        "How secure is my data?",
+        "Is my data safe on Dot-App?",
+        "What security measures does Dot-App have?"
+      ],
+      "responses": [
+        "We use industry-standard encryption and secure authentication methods to protect your data.",
+        "Dot-App employs strong security measures to ensure the safety of your personal and learning data."
+      ]
+    },
+    {
+      "tag": "course_content",
+      "patterns": [
+        "What is the course content of Dot-App?",
+        "Can I access course materials?",
+        "How do I access the learning materials?"
+      ],
+      "responses": [
+        "Course content is available to subscribed students. You can access it from your dashboard once you're logged in.",
+        "Materials are organized by Tracks, Dots, and SubDots. Simply choose your learning path and start studying."
+      ]
+    },
+    {
+      "tag": "update",
+      "patterns": [
+        "Do you have any new updates?",
+        "What’s new in Dot-App?",
+        "Can I update Dot-App?"
+      ],
+      "responses": [
+        "Yes! Dot-App frequently releases updates. Check the 'Updates' section in your dashboard for more information.",
+        "Ensure you have the latest version by visiting your app store and checking for updates."
+      ]
+    }
+  ]
+}
